@@ -1,0 +1,269 @@
+/* Reset geral */
+* {
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove preenchimentos padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo da largura e
+    altura dos elementos */
+    }
+    /* Estilos gerais para o corpo da página */
+    body {
+    font-family: "Poppins", Arial, sans-serif; /* Define a fonte usada na página */
+    background-color: #f3f4f6; /* Cor de fundo da página */
+    color: #333; /* Cor do texto */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Adiciona um espaço interno de 20px ao redor do conteúdo */
+    }
+    /* Estilos para o header */
+    header {
+    width: 100%; /* O header ocupa toda a largura da página */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do header */
+    text-align: center; /* Centraliza o conteúdo dentro do header */
+    }
+    
+    /* Estilos para a imagem do header */
+    .header-img {
+    width: 250px; /* Define a largura da imagem do header */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    display: block; /* Garante que a imagem seja exibida como bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    }
+    /* Estilos para o container principal */
+    #container {
+    display: flex; /* Usa flexbox para layout */
+    flex-wrap: wrap; /* Permite que os itens envolvam para a próxima linha se necessário
+    */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    max-width: 1200px; /* Define a largura máxima do container */
+    transition: margin-left 0.3s ease, margin-right 0.3s ease; /* Adiciona uma transição
+    suave ao alterar as margens laterais */
+    }
+    /* Estilos para os blocos de produtos */
+    .bloco {
+    background-color: #fff; /* Cor de fundo dos blocos */
+    width: 280px; /* Largura dos blocos */
+    margin: 20px; /* Espaço ao redor dos blocos */
+    padding: 15px; /* Espaço interno dentro dos blocos */
+    text-align: center; /* Centraliza o texto dentro dos blocos */
+    
+    border-radius: 15px; /* Bordas arredondadas dos blocos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor dos blocos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para
+    transformações e sombras */
+    }
+    /* Efeito ao passar o mouse sobre os blocos */
+    .bloco:hover {
+    transform: translateY(-5px); /* Move o bloco para cima ao passar o mouse */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Intensifica a sombra ao passar o
+    mouse */
+    }
+    /* Estilos para o título dentro dos blocos */
+    .bloco h2 {
+    font-size: 1.5em; /* Tamanho da fonte do título */
+    color: #ff6b6b; /* Cor do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    }/* Estilos para o texto de descrição dentro dos blocos */
+    .bloco p {
+    font-size: 1em; /* Tamanho da fonte do texto de descrição */
+    color: #666; /* Cor do texto de descrição */
+    margin-bottom: 10px; /* Espaço abaixo do texto de descrição */
+    }
+    /* Estilos para o preço dentro dos blocos */
+    .bloco .preco {
+    
+    font-size: 1.2rem; /* Tamanho da fonte do preço */
+    color: #5bb65e; /* Cor do preço */
+    margin-top: 25px; /* Espaço acima do preço */
+    font-weight: bold; /* Deixa o preço em negrito */
+    }
+    /* Estilos para a div que contém a imagem do sorvete */
+    .div-sorvete {
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    margin-top: 15px; /* Espaço acima da imagem do sorvete */
+    }
+    /* Estilos para a imagem do sorvete */
+    .sorvetinho {
+    border-radius: 10px; /* Bordas arredondadas da imagem do sorvete */
+    width: 100%; /* Largura total do contêiner */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    object-fit: cover; /* Garante que a imagem cobre o contêiner */
+    }
+    /* Estilos para o botão de adicionar ao carrinho */
+    .add-carrinho {
+    background-color: #ff6b6b; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaço interno do botão */
+    border: none; /* Remove a borda padrão */
+    
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor para indicar um botão clicável */
+    margin-top: 10px; /* Espaço acima do botão */
+    transition: 0.3s ease; /* Transição suave para efeitos de hover */
+    }
+    /* Efeito ao passar o mouse sobre o botão de adicionar ao carrinho */
+    .add-carrinho:hover {
+    background-color: #ff4d4d; /* Altera a cor de fundo ao passar o mouse */
+    }
+    /* Estilos para o menu lateral */
+    #menu {
+    position: fixed; /* Fixação do menu na tela */
+    top: 0; /* Alinhado ao topo da página */
+    left: 0; /* Alinhado à esquerda da página */
+    height: 100%; /* Altura total da tela */
+    width: 220px; /* Largura do menu */
+    background-color: #ff6b6b; /* Cor de fundo do menu */
+    color: white; /* Cor do texto do menu */
+    padding-top: 70px; /* Espaço acima dos itens do menu */
+    transform: translateX(-250px); /* Inicialmente oculta o menu fora da tela */
+    transition: 0.3s ease; /* Transição suave para a abertura e fechamento */
+    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+    }
+    /* Estilos para o menu quando está ativo */
+    
+    #menu.active {
+    transform: translateX(0); /* Move o menu para dentro da tela quando ativo */
+    }
+    /* Estilos para os links no menu lateral */
+    #menu a {
+    padding: 15px 20px; /* Espaço interno dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Cor do texto dos links */
+    font-size: 1.1em; /* Tamanho da fonte dos links */
+    display: block; /* Faz com que o link ocupe toda a largura disponível */
+    transition: #fff 0.3s ease; /* Transição suave para efeitos de hover */
+    }
+    /* Efeito ao passar o mouse sobre os links do menu */
+    #menu a:hover {
+    background-color: #ffe2e2; /* Altera a cor de fundo dos links ao passar o mouse */
+    color: #333; /* Altera a cor do texto ao passar o mouse */
+    }
+    /* Estilos para o ícone do menu (hamburger) */
+    #burger {
+    position: fixed; /* Fixação do ícone na tela */
+    top: 20px; /* Alinhado ao topo da página */
+    left: 20px; /* Alinhado à esquerda da página */
+    font-size: 30px; /* Tamanho do ícone */
+    cursor: pointer; /* Muda o cursor para indicar um elemento clicável */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+    
+    color: #ff6b6b; /* Cor do ícone */
+    transition: color 0.3s ease; /* Transição suave para mudanças de cor */
+    }
+    /* Estilos para o ícone do menu quando o menu está ativo */
+    #burger.white {
+    color: white; /* Altera a cor do ícone quando o menu está ativo */
+    }
+    /* Estilos para o ícone do carrinho */
+    #cart-icon {
+    position: fixed; /* Fixação do ícone na tela */
+    top: 20px; /* Alinhado ao topo da página */
+    right: 20px; /* Alinhado à direita da página */
+    font-size: 30px; /* Tamanho do ícone */
+    cursor: pointer; /* Muda o cursor para indicar um elemento clicável */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+    color: #ff6b6b; /* Cor do ícone */
+    }
+    /* Estilos para a sidebar do carrinho */
+    #cart-sidebar {
+    position: fixed; /* Fixação da sidebar na tela */
+    top: 0; /* Alinhado ao topo da página */
+    right: -300px; /* Inicialmente oculta a sidebar fora da tela */
+    width: 300px; /* Largura da sidebar */
+    height: 100%; /* Altura total da tela */
+    background-color: #fff; /* Cor de fundo da sidebar */
+    
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1); /* Sombra ao redor da sidebar */
+    padding: 20px; /* Espaço interno da sidebar */
+    transition: right 0.3s ease; /* Transição suave para a abertura e fechamento */
+    z-index: 15; /* Garante que a sidebar fique acima de outros elementos */
+    }
+    /* Estilos para a sidebar quando está ativa */
+    #cart-sidebar.active {
+    right: 0; /* Move a sidebar para dentro da tela quando ativa */
+    }
+    /* Estilos para os itens do carrinho */
+    .cart-item {
+    border-bottom: 1px solid #ccc; /* Borda inferior dos itens do carrinho */
+    padding: 10px 0; /* Espaço interno ao redor dos itens */
+    }
+    /* Estilos para o título dos itens do carrinho */
+    .cart-item h4 {
+    font-size: 1.2em; /* Tamanho da fonte do título */
+    margin-bottom: 5px; /* Espaço abaixo do título */
+    }
+    /* Estilos para o botão de remover item do carrinho */
+    .remove-item {
+    background-color: #ff6b6b; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 8px 16px; /* Espaço interno do botão */
+    border: none; /* Remove a borda padrão */
+    
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor para indicar um elemento clicável */
+    margin-top: 10px; /* Espaço acima do botão */
+    transition: 0.3s ease; /* Transição suave para efeitos de hover */
+    }
+    /* Estilos para o botão de finalizar compra */
+    #finalizar-btn {
+    background-color: #4caf50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaço interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor para indicar um elemento clicável */
+    margin-top: 10px; /* Espaço acima do botão */
+    width: 100%; /* Largura total do botão */
+    }
+    /* Efeito ao passar o mouse sobre o botão de finalizar compra */
+    #finalizar-btn:hover {
+    background-color: #45a049; /* Altera a cor de fundo ao passar o mouse */
+    }
+    /* Estilos para o botão de cancelar compra */
+    #cancelar-btn {
+    background-color: rgb(206, 206, 0); /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaço interno do botão */
+    
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor para indicar um elemento clicável */
+    margin-top: 8px; /* Espaço acima do botão */
+    width: 100%; /* Largura total do botão */
+    text-align: center; /* Centraliza o texto do botão */
+    }
+    /* Efeito ao passar o mouse sobre o botão de cancelar compra */
+    #cancelar-btn:hover {
+    background-color: rgb( 168,168,0); /* Altera a cor de fundo ao passar o mouse */
+    }
+    /* Estilos responsivos para telas menores que 768px */
+    @media (max-width: 600px) {
+    #container {
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-left: 0; /* Remove a margem esquerda */
+    margin-right: 0; /* Remove a margem direita */
+    }
+    .bloco {
+    width: 80%; /* Largura dos blocos reduzida para 90% */
+    }
+    #menu {
+    width: 170px; /* Reduz a largura do menu */
+    }
+    
+    #cart-sidebar {
+    width: 255px; /* Reduz a largura do menu de carrinho */
+    }
+    #container {
+    margin-left: 0; /* Remove a margem esquerda */
+    transition: transform 0.3s ease; /* Transição suave para mudanças no container */
+    }
+    #container.shift {
+    transform: translateX(
+    80px
+    ); /* Move o container para a direita quando o menu está ativo */
+    }
+    }
+    
